@@ -1,0 +1,98 @@
+body {
+    height: 100vh;
+    background-image: url(../PICS/BG_subscribe.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+section {
+    padding: 30px;
+    text-align: center;
+    font-size: 1.15em;
+    margin: auto;
+    margin-top: 7%;
+    width: 45%;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    padding: 15px;
+}
+#adhesion_form div div{
+    margin-top: 0;
+    width: 250px;
+}
+#adhesion_form i{
+    align-self: flex-end;
+    font-size: smaller;
+    font-style: normal;
+}
+label[for="homme"],label[for="femme"]{
+    width: 200px;
+    font-size: medium;
+}
+input[type=radio]{
+    width: 25%;
+    text-align: end;
+}
+input[type=text], input[type=number], input[type=email], input[type=password] {
+    border-radius: 5px;
+    width: 40%;
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="submit"], input[type="reset"] {
+    background-color: lightgray;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+h1, h2, h3 {
+    /*font-family: 'Anton', sans-serif;*/
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 3px;
+}
+
+
+label {
+    color: blanchedalmond;
+    font-size: large;
+}
+
+input{
+    width: 160px;
+    margin-left: 20px;
+    border-radius: 5px;
+    height: 25px;
+}
+
+
+#adhesion_form{
+    display: flex;
+    flex-direction: column;
+}
+#adhesion_form div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px ;
+}
+
+#adhesion_form div:last-of-type{
+    margin-top: 20px;
+    align-self: center;
+}
+
+i{
+    color: rgb(240, 95, 95);
+}

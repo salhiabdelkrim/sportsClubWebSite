@@ -1,0 +1,92 @@
+body {
+    height: 100vh;
+    background-image: url(../PICS/BG_subscribe.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+div img{
+    margin-top: 10px;
+    width: 80%;
+    height: 136px;
+}
+
+h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase; 
+    background-color: rgb(236, 159, 59);
+    border-radius: 3px;
+    padding: 3px;
+    color: black;
+}
+
+.articles:first-of-type{
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+.articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    
+}
+.articles:nth-of-type(2){
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+.grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+
+.grid div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 27%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* Position initiale : en bas, invisible */
+    transform: translateY(100%);
+    opacity: 0;
+    /* Transition pour animation fluide */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; 
+
+
+
+}
+.grid div>h1{
+    height: 30px;
+    position: relative;
+    top: 50px;
+    border-radius: 10px;
+    background-color: rgba(236, 159, 59, 0.5);
+}
+
+
+
+/* Position finale : visible et à sa place */
+.grid div.show{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+p{
+    padding-left: 15px;
+}
+

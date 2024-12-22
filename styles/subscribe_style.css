@@ -1,0 +1,176 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../PICS/BG_subscribe.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+ }
+ h1, h2, h3 {
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase; 
+    background-color: rgb(236, 159, 59);
+    border-radius: 3px;
+    padding: 3px;
+}
+h4{
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase; 
+    background-color: rgb(236, 159, 59);
+    border-radius: 3px;
+    padding: 3px;
+    opacity: 1;
+    transition: opacity 2s ease-out;
+    z-index: 900;
+    position: fixed;
+}
+.grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.grid div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    /* Position initiale : en bas, invisible */
+    transform: translateY(100%);
+    opacity: 0;
+    /* Transition pour animation fluide */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; 
+}
+/* Position finale : visible et à sa place */
+.grid div.show{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+div>img{
+    margin-top: 10px;
+    width: 80%;
+    height: 136px;
+}
+div:nth-last-of-type(2)>h3, div:nth-last-of-type(4)>h3, div:nth-last-of-type(6)>h3{
+    background-color: rgba(6, 80, 15);
+    color: white;
+}
+
+.articles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    
+}
+
+.grid div ul{
+    color: blanchedalmond;
+
+}
+.grid div ul>li:hover{
+    background-color: transparent;
+}
+li strong{
+    color: rgb(113, 221, 126);
+}
+
+.grid div>button {
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: large;
+    background-color: blanchedalmond;
+    border-radius: 6px;
+    cursor: pointer;
+    
+}
+input[type='submit']{
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: large;
+    background-color: blanchedalmond;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/*le code css du formulaire */
+
+.confirmation{
+    position: fixed;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(91, 55, 2, 1);
+    border-radius: 10px;
+    padding: 30px;
+    /* Position initiale : en bas, invisible */
+    transform: translateY(150%);
+    opacity: 0;
+    /* Transition pour animation fluide */
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out; 
+}
+/* Position finale : visible et à sa place */
+.confirmation.show{
+    transform: translateY(0);
+    opacity: 0.98;
+}
+
+.confirmation span{
+    align-self:flex-end;
+    position: relative;
+    bottom: 10px;
+    right: 5%;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#souscription_form{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+label {
+    color: blanchedalmond;
+    font-size: large;
+}
+
+input, select{
+    width: 160px;
+    margin-left: 20px;
+    border-radius: 5px;
+    height: 25px;
+}
+
+
+input[type='submit']{
+    margin-top: 20px;
+    align-self: center;
+}
+#souscription_form div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#erreur0,#erreur1,#erreur2{
+    font-size: small;
+    color: rgb(240, 95, 95);
+    margin-top: 5px;
+    margin-left: 7px;
+    align-self: flex-end;
+}
+
